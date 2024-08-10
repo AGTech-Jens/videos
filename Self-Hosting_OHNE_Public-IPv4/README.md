@@ -29,7 +29,7 @@ ListenPort = 51820
 
 [Peer]
 PublicKey = <public Key der pfSense>
-AllowedIPs = 10.100.90.0/31, 192.168.69.0/24
+AllowedIPs = 10.100.90.0/31
 PersistentKeepalive = 25
 ```
 
