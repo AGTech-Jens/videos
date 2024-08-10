@@ -6,7 +6,7 @@ Egal ob DS-Lite, CG-NAT oder mobile Internetlösungen wie z.B. Starlink, in dies
 - VPS im Rechenzentrum mit ausreichend monatlichem Datenvolumen & Bandbreite
 - On-Prem pfSense Firewall, konfiguriert wie in diesem Video gezeigt: https://youtu.be/7VWu2qDCjHw
 
-*Funktioniert wie am Ende des Videos erklärt auch ohne pfSense, mit beispielsweise einem LXC für WG auf deinem Proxmox Server, würd aber ganz klar zu einer ordentlichen Firewall raten!* 
+*Funktioniert wie am Ende des Videos erklärt auch ohne pfSense, mit beispielsweise einem LXC für WG auf deinem Proxmox Server, würde aber ganz klar zu einer ordentlichen Firewall raten!* 
 
 ## Notizen zu diesem Video
 
