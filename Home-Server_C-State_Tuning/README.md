@@ -16,7 +16,7 @@ apt install powertop
 #Befehl um Powertop in unRaid zu installieren
 kein Befehl notwendig -> Powertop über das "NerdTools" Plugin aktivieren!
 
-#Die aktiellen C-State Werte anzeigen
+#Die aktuellen Package C-State Werte anzeigen
 powertop
 ```
 *Mittels Tab in Powertop dann in den Tab "Idle stats" springen*
