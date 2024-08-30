@@ -1,0 +1,39 @@
+# Home Server Stromverbrauch optimieren mit C-States
+Du erreichtst mit deinem Server nicht die in meinen Build Videos gezeigten Stromverbrauchswerte obwohl du die Hardware IDENT nachgekauft hast? Oder willst noch das letzte Bisschen Effizienz aus deinem aktuellen Home Server rausholen? Dann wird's auf jeden Fall mal Zeit einen Blick auf die C-States von seinem Server zu werfen!
+
+## Voraussetzungen
+
+- Geeignete Hardware, für genauere Infos siehe mein "Effiziente Home Server bauen" Video! (LINK HIER SOBALD ONLINE)
+- Linux basiertes Betriebssytem auf deinem Server installiert
+
+## Status Quo in Erfahrung bringen
+
+### C-States mittels Powertop anzeigen
+
+```bash
+#Befehl um Powertop in Debian Linux basiertem System zu installieren
+apt install powertop
+#Befehl um Powertop in unRaid zu installieren
+kein Befehl notwendig -> Powertop über das "NerdTools" Plugin aktivieren!
+
+#Die aktiellen C-State Werte anzeigen
+powertop
+```
+*Mittels Tab in Powertop dann in den Tab "Idle stats" springen*
+
+### Befehl um zu prüfen ob Komponenten in deinem System aktuell kein ASPM nutzen
+
+```bash
+lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'
+```
+
+*JEDES hier als “ASPM Disabled” gelistete Device ist dein FEIND! :D*
+
+## Ziel
+Je höher die Prozentzahl in höheren C-States, desto effizienter läuft dein System im Idle. Heißt siehst du den Großteil in der linken "Pkg(HW)" Spalte in beispielsweise C2, bedeutet das dein Server nutzt quasi keine dieser "semi-Idle" States, die dir im Leerlauf einiges an Verbrauch ersparen könnten ohne das du bei der Benutzung irgendwas davon mitbekommst!
+
+### Beispiel Onboard NIC beim Asrock N100m (siehe "unRaid Server Build 2024" Video)
+xxxxx
+```bash
+xxxxx
+```
