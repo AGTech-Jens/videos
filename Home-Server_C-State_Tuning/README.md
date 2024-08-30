@@ -32,8 +32,17 @@ lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'
 ## Ziel
 Je höher die Prozentzahl in höheren C-States, desto effizienter läuft dein System im Idle. Heißt siehst du den Großteil in der linken "Pkg(HW)" Spalte in beispielsweise C2, bedeutet das dein Server nutzt quasi keine dieser "semi-Idle" States, die dir im Leerlauf einiges an Verbrauch ersparen könnten ohne das du bei der Benutzung irgendwas davon mitbekommst!
 
+### C-States im BIOS aktivieren
+Grundsätzlich sollte man natürlich erstmal im BIOS überprüfen ob C-States (nd ASPM_L1) überhaupt im BIOS aktiviert sind.
+
 ### Beispiel Onboard NIC beim Asrock N100m (siehe "unRaid Server Build 2024" Video)
-xxxxx
+In meinem kürzlich erschienenen unRaid Home Build Guide für 2024 habt ihr beispielsweise gesehen wie sowas simples wie die Onboard Realtek Netzwerkkarte das System in C3 gehalten hat und nach Ausführen dieses Befehls wars Plötzlich unten in C8.
 ```bash
-xxxxx
+echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link(l1_aspm
+```
+
+### Die Quick&Dirty Lösung für unRaid
+In unRaid reichts meiner Erfahrung nach oftmals schon eifach diesen einen Befehl auszuführen, und schon sieht man bei allen Geräten mit dem Befehl von Oben “ASPM Enabled”.
+```bash
+echo -n powersave > /sys/module/pcie_aspm/parameters/policy
 ```
