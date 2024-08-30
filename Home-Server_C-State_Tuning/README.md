@@ -42,7 +42,7 @@ echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link/l1_aspm
 ```
 
 ### Die Quick&Dirty Lösung für unRaid
-In unRaid reichts meiner Erfahrung nach oftmals schon eifach diesen einen Befehl auszuführen, und schon sieht man bei allen Geräten mit dem Befehl von Oben “ASPM Enabled”.
+In unRaid reichts (meiner Erfahrung nach) oftmals aber auch schon einfach diesen Befehl hier auszuführen, schon sieht man bei allen Geräten mit dem Befehl von Oben “ASPM Enabled”.
 ```bash
 echo -n powersave > /sys/module/pcie_aspm/parameters/policy
 ```
