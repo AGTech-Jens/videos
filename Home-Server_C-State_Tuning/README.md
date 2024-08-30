@@ -19,7 +19,7 @@ kein Befehl notwendig -> Powertop über das "NerdTools" Plugin aktivieren!
 #Die aktuellen Package C-State Werte anzeigen
 powertop
 ```
-*Mittels Tab in Powertop dann in den Tab "Idle stats" springen*
+*mittels Tab-Taste auf deiner Tastatur in Powertop dann in den "Idle stats" Tab springen*
 
 ### Befehl um zu prüfen ob Komponenten in deinem System aktuell kein ASPM nutzen
 
