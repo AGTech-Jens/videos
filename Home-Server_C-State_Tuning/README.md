@@ -38,7 +38,7 @@ Grundsätzlich sollte man natürlich erstmal im BIOS überprüfen ob C-States, P
 ### Beispiel Onboard NIC beim Asrock N100m ("unRaid Server Build 2024" Video)
 In meinem kürzlich erschienenen unRaid Home Build Guide für 2024 hatt ich beispielsweise den Fall das die Onboard Realtek Netzwerkkarte das System in C3 gehalten hat und nach Ausführen dieses Befehls gings plötzlich runter in C8.
 ```bash
-echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link(l1_aspm
+echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link/l1_aspm
 ```
 
 ### Die Quick&Dirty Lösung für unRaid
