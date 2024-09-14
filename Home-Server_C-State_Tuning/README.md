@@ -41,7 +41,8 @@ In meinem kürzlich erschienenen unRaid Home Build Guide für 2024 hatt ich beis
 echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link/l1_aspm
 ```
 
-### Enable ASPM Skript
+### Enable-ASPM Skript
+Einfacher geht's aber mittels aspm-enable.sh Skript!
 tbd
 
 ### Quick&Dirty Lösung für unRaid
