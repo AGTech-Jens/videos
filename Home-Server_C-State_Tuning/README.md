@@ -14,7 +14,7 @@ Du erreichtst mit deinem Server nicht die in meinen Build Videos gezeigten Strom
 #Befehl um Powertop in Debian Linux basiertem System zu installieren
 apt install powertop
 #Befehl um Powertop in unRaid zu installieren
-kein Befehl notwendig -> Powertop über das "NerdTools" Plugin aktivieren!
+kein Befehl notwendig -> Powertop über das "NerdTools" Plugin installieren!
 
 #Die aktuellen Package C-State Werte anzeigen
 powertop
@@ -57,12 +57,13 @@ Einfacher geht's aber definitiv mittels aspm-enable.sh Skript. Die "Problemkinde
 unRaid ist in der Hinsicht besonders, dass alles abseits von /boot nicht persistent ist. Heißt das Skript an sich funktioniert zwar wie auch in jedem anderen Linux basierten OS, man muss allerdings paar Dinge beachten:
 1. aspm-enable.sh Skript aus meinem Git auf dem Server in /boot/scripts platzieren
 2. aspm-enable.sh Skript mittels "chmod +x aspm-enable.sh" ausführbar machen
-3. User Scripts Plugin installieren und ein neues User Script erstellen:
+3. bc das "NerdTools" Plugin installieren
+4. User Scripts Plugin installieren und ein neues User Script erstellen:
 ```bash
 #!/bin/bash
 bash /boot/scripts/enable-aspm.sh [PCI Device] [ASPM Setting]
 ```
-4. Dieses Skript lässt man dann über das User Scripts Plugin automatisch bei jedem Server-Reboot ausführen und muss sich somit keine Gedanken mehr über ASPM machen wenn man seinen Server neustertet.
+5. Dieses Skript lässt man dann über das User Scripts Plugin automatisch bei jedem Server-Reboot ausführen und muss sich somit keine Gedanken mehr über ASPM machen wenn man seinen Server neustertet.
 
 ### Quick&Dirty Lösung für unRaid
 In unRaid ists auch einen Versuch Wert mal den Powersave Mode zu versuchen, die entsprechende Policy lässt sich mit folgendem Befehl triggern:
