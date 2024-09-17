@@ -46,12 +46,10 @@ Einfacher geht's aber definitiv mittels aspm-enable.sh Skript- die "Problemkinde
 1. aspm-enable.sh Skript aus meinem Git auf dem Server in /usr/sbin platzieren
 2. aspm-enable.sh Skript mittels "chmod +x aspm-enable.sh" ausführbar machen
 3. Skript ausführen:
-s
-
-*Mögliche ASPM Settings:*
-*1 -> L0s only*
-*2 -> L1 only*
-*3 -> L1 and L0s*
+```bash
+/usr/sbin/enable-aspm.sh [PCI Device] [ASPM Setting]
+```
+*Mögliche ASPM Settings: 1=L02; 2=L1; 3=L1&L0s*
 
 ### Quick&Dirty Lösung für unRaid
 In unRaid ists auch einen Versuch Wert mal den Powersave Mode zu versuchen, die entsprechende Policy lässt sich mit folgendem Befehl triggern:
