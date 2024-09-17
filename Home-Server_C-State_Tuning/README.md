@@ -32,6 +32,8 @@ lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'
 ## Ziel
 Je höher die Prozentzahl in höheren C-States, desto effizienter läuft dein System im Idle. Heißt siehst du den Großteil in der linken "Pkg(HW)" Spalte in beispielsweise C2, bedeutet das dein Server nutzt quasi keine dieser "semi-Idle" States, die dir im Leerlauf einiges an Verbrauch ersparen könnten ohne das du bei der Benutzung irgendwas davon mitbekommst!
 
+## Vorgehensweise
+
 ### Idle Features im BIOS aktivieren
 Grundsätzlich sollte man natürlich erstmal im BIOS überprüfen ob C-States, Package C-States und ASPM L1 überhaupt im BIOS aktiviert sind.
 
