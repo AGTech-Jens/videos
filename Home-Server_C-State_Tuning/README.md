@@ -57,7 +57,7 @@ Einfacher geht's aber definitiv mittels aspm-enable.sh Skript. Die "Problemkinde
 unRaid ist in der Hinsicht besonders, dass alles abseits von /boot nicht persistent ist. Heißt das Skript an sich funktioniert zwar wie auch in jedem anderen Linux basierten OS, man muss allerdings paar Dinge beachten:
 1. aspm-enable.sh Skript aus meinem Git auf dem Server in /boot/scripts platzieren
 2. aspm-enable.sh Skript mittels "chmod +x aspm-enable.sh" ausführbar machen
-3. bc das "NerdTools" Plugin installieren
+3. bc über das "NerdTools" Plugin installieren
 4. User Scripts Plugin installieren und ein neues User Script erstellen:
 ```bash
 #!/bin/bash
