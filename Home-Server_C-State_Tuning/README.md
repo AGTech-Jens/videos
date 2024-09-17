@@ -65,6 +65,12 @@ bash /boot/scripts/enable-aspm.sh [PCI Device] [ASPM Setting]
 ```
 5. Dieses Skript lässt man dann über das User Scripts Plugin automatisch bei jedem Server-Reboot ausführen und muss sich somit keine Gedanken mehr über ASPM machen wenn man seinen Server neustertet.
 
+### C-State Auto-Tune
+Ist alles an ASPM enabled was geht, nicht vergessen auch noch den Power-Top Autotune drüberlaufen zu lassen!
+```bash
+powertop --auto-tune
+```
+
 ### Quick&Dirty Lösung für unRaid
 In unRaid ists auch einen Versuch Wert mal den Powersave Mode zu versuchen, die entsprechende Policy lässt sich mit folgendem Befehl triggern:
 ```bash
