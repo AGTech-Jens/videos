@@ -3,7 +3,7 @@ Du erreichtst mit deinem Server nicht die in meinen Build Videos gezeigten Strom
 
 ## Voraussetzungen
 
-- Geeignete Hardware, für genauere Infos siehe mein "Effiziente Home Server bauen" Video! (LINK HIER SOBALD ONLINE)
+- Geeignete Hardware, für genauere Infos siehe mein "Effiziente Home Server bauen" Video! [LINK HIER SOBALD ONLINE]
 - Linux basiertes Betriebssytem auf deinem Server
 
 ## Status Quo in Erfahrung bringen
