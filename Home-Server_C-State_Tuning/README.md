@@ -51,7 +51,7 @@ Einfacher geht's aber definitiv mittels aspm-enable.sh Skript- die "Problemkinde
 ```
 *Mögliche ASPM Settings: 1=L02; 2=L1; 3=L1&L0s*
 
-### Enable-ASPM Skript in unRaid nutzen
+#### Enable-ASPM Skript in unRaid nutzen
 unRaid ist in der Hinsicht besonders, dass alles abseits von /boot nicht persistent ist. Heißt das Skript an sich funktioniert zwar wie auch in jedem anderen Linux basierten OS, man muss allerdings paar Dinge beachten:
 1. aspm-enable.sh Skript aus meinem Git auf dem Server in /boot/scripts platzieren
 2. aspm-enable.sh Skript mittels "chmod +x aspm-enable.sh" ausführbar machen
