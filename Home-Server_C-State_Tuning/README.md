@@ -51,7 +51,7 @@ Einfacher geht's aber definitiv mittels aspm-enable.sh Skript. Die "Problemkinde
 ```bash
 /usr/sbin/enable-aspm.sh [PCI Device] [ASPM Setting]
 ```
-*Mögliche ASPM Settings: 1=L02; 2=L1; 3=L1&L0s*
+*Mögliche ASPM Settings: 1=L0s; 2=L1; 3=L1&L0s*
 
 ### Enable-ASPM Skript in unRaid nutzen
 unRaid ist in der Hinsicht besonders, dass alles abseits von /boot nicht persistent ist. Heißt das Skript an sich funktioniert zwar wie auch in jedem anderen Linux basierten OS, man muss allerdings paar Dinge beachten:
