@@ -38,9 +38,9 @@ Je höher die Prozentzahl in höheren C-States, desto effizienter läuft dein Sy
 Grundsätzlich sollte man natürlich erstmal überprüfen ob C-States, Package C-States und ASPM L1 überhaupt im BIOS aktiviert sind.
 
 ### Beispiel: Onboard NIC beim Asrock N100m ("unRaid Server Build 2024" Video)
-In meinem kürzlich erschienenen unRaid Home Build Guide für 2024 hatt ich beispielsweise den Fall das die Onboard Realtek Netzwerkkarte das System in C3 gehalten hat und mittels folgendem Befehl um L1_ASPM zu erzwingen gings plötzlich runter bis C8.
+In meinem kürzlich erschienenen unRaid Home Build Guide für 2024 hatt ich beispielsweise den Fall das die Onboard Realtek Netzwerkkarte des Asrock N100m das System in C3 gehalten hat und mittels folgendem Befehl um L1_ASPM zu erzwingen gings plötzlich runter bis C8.
 ```bash
-echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link/l1_aspm
+echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:03\:00.0/link/l1_aspm
 ```
 
 ### Enable-ASPM Skript
