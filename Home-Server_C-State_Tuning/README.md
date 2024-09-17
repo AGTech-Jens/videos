@@ -43,7 +43,8 @@ echo 1 | sudo tee /sys/bus/pci/drivers/r8169/0000\:01\:00.0/link/l1_aspm
 
 ### Enable-ASPM Skript
 Einfacher geht's aber definitiv mittels aspm-enable.sh Skript- die "Problemkinder" raussuchen, Adresse notieren und anschleßend mit Hilfe des Skripts versuchen auf L1 oder L0s ASPM zu forcen!
-tbd
+
+swsasss
 
 ### Quick&Dirty Lösung für unRaid
 In unRaid ists auch einen Versuch Wert mal den Powersave Mode zu versuchen, die entsprechende Policy lässt sich mit folgendem Befehl triggern:
