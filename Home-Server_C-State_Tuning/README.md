@@ -1,5 +1,5 @@
 # Home Server Stromverbrauch optimieren mit C-States
-Du erreichtst mit deinem Server nicht die in meinen Build Videos gezeigten Stromverbrauchswerte obwohl du die Hardware IDENT nachgekauft hast? Oder willst noch das letzte Bisschen Effizienz aus deinem aktuellen Home Server rausholen? Dann wird's auf jeden Fall mal Zeit einen Blick auf die C-States von seinem Server zu werfen!
+Du erreichtst mit deinem Server nicht die in meinen Build Videos gezeigten Stromverbrauchswerte obwohl du die Hardware IDENT nachgekauft hast? Oder willst noch das letzte Bisschen Effizienz aus deinem aktuellen Home Server rausholen? Dann wird's Zeit mal einen Blick auf die Package C-States von seinem Server zu werfen!
 
 ## Voraussetzungen
 
