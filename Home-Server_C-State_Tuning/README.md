@@ -21,7 +21,7 @@ powertop
 ```
 *mittels Tab-Taste auf deiner Tastatur in Powertop dann in den "Idle stats" Tab springen*
 
-### Befehl um zu prüfen ob Komponenten in deinem System aktuell kein ASPM nutzen
+### Befehl um zu prüfen welche PCI Devices in deinem System aktuell ASPM nutzen
 
 ```bash
 lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'
@@ -50,6 +50,17 @@ Einfacher geht's aber definitiv mittels aspm-enable.sh Skript- die "Problemkinde
 /usr/sbin/enable-aspm.sh [PCI Device] [ASPM Setting]
 ```
 *Mögliche ASPM Settings: 1=L02; 2=L1; 3=L1&L0s*
+
+### Enable-ASPM Skript in unRaid nutzen
+unRaid ist in der Hinsicht besonders, dass alles abseits von /boot nicht persistent ist. Heißt das Skript an sich funktioniert zwar wie auch in jedem anderen Linux basierten OS, man muss allerdings paar Dinge beachten:
+1. aspm-enable.sh Skript aus meinem Git auf dem Server in /boot/scripts platzieren
+2. aspm-enable.sh Skript mittels "chmod +x aspm-enable.sh" ausführbar machen
+3. User Scripts Plugin installieren und ein neues User Script erstellen:
+```bash
+#!/bin/bash
+bash /boot/scripts/enable-aspm.sh [PCI Device] [ASPM Setting]
+```
+4. Dieses Skript lässt man dann über das User Scripts Plugin automatisch bei jedem Server-Reboot ausführen und muss sich somit keine Gedanken mehr über ASPM machen wenn man seinen Server neustertet.
 
 ### Quick&Dirty Lösung für unRaid
 In unRaid ists auch einen Versuch Wert mal den Powersave Mode zu versuchen, die entsprechende Policy lässt sich mit folgendem Befehl triggern:
