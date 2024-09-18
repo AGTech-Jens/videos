@@ -66,7 +66,7 @@ bash /boot/scripts/enable-aspm.sh [PCI Device] [ASPM Setting]
 5. Dieses Skript lässt man dann über das User Scripts Plugin automatisch bei jedem Server-Reboot ausführen und muss sich somit keine Gedanken mehr über ASPM machen wenn man seinen Server neustertet.
 
 ### C-State Auto-Tune
-Ist alles an ASPM enabled was geht, nicht vergessen auch noch den Power-Top Autotune drüberlaufen zu lassen!
+Stehen nun alle Devices auf "ASPM Enabled", nicht vergessen noch den Power-Top Autotune drüberlaufen zu lassen! Spätestens an der Stelle sollten deine Idle C-States dann irgendwo in den Bereich C6-C8 runter gehen.
 ```bash
 powertop --auto-tune
 ```
